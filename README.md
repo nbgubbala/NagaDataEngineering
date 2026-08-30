@@ -1,124 +1,105 @@
 # NagaDataEngineering
 
-## 📖 About the Project
+A hands-on data engineering repository focused on learning, prototyping, and building real-world examples using modern data tools.
 
-NagaDataEngineering is my personal data engineering learning repository where I implement concepts, tools, and best practices learned throughout my Data Engineering journey.
+This project contains starter implementations for data pipelines, streaming concepts, PostgreSQL setup, Spark processing, and a small browser-based dashboard for visualizing sample data.
 
-The goal of this repository is to build hands-on experience with modern data engineering technologies and demonstrate practical implementations of real-world data workflows.
+## Overview
 
----
+The repository is organized around common data engineering building blocks:
 
-## 🎯 Learning Objectives
+- Databricks examples and configs
+- Kafka producer/consumer examples
+- PostgreSQL schema and migration structure
+- PySpark data processing and local dashboard demo
 
-This project focuses on learning and implementing:
-
-- Python for Data Engineering
-- SQL and Database Design
-- Data Warehousing Concepts
-- ETL / ELT Pipelines
-- Apache Spark
-- Apache Airflow
-- Data Lakes
-- Cloud Platforms (Azure/AWS/GCP)
-- Data Modeling
-- Big Data Processing
-- Data Quality and Validation
-- CI/CD for Data Pipelines
-
----
-
-## 🛠️ Technologies
-
-Some technologies and tools that will be explored in this repository:
-
-| Category | Tools |
-|-----------|--------|
-| Programming | Python |
-| Databases | SQL Server, PostgreSQL, MySQL |
-| Big Data | Apache Spark |
-| Orchestration | Apache Airflow |
-| Cloud | Azure |
-| Version Control | Git, GitHub |
-| Data Storage | Data Lake, Data Warehouse |
-
----
-
-## 📂 Repository Structure
+## Repository structure
 
 ```text
 NagaDataEngineering/
-│
-├── python/
-├── sql/
-├── data-modeling/
-├── etl-pipelines/
-├── airflow/
-├── spark/
-├── cloud/
-├── projects/
-├── datasets/
-└── docs/
+├── README.md
+├── databricks/
+│   ├── jobs/
+│   ├── notebooks/
+│   └── pipeline_config.json
+├── kafka/
+│   ├── configs/
+│   ├── consumers/
+│   ├── producers/
+│   └── consumer_config.properties
+├── postgresql/
+│   ├── migrations/
+│   ├── README.md
+│   └── schema_init.sql
+├── pyspark/
+│   ├── app.py
+│   ├── data_ui.html
+│   ├── employees.csv
+│   ├── sample_data.json
+│   ├── test_data_example.py
+│   └── configs/
+└── .git/
 ```
 
-### Folder Description
+## Current components
 
-- **python/** → Python exercises and scripts
-- **sql/** → SQL queries and database practice
-- **data-modeling/** → Star schema, snowflake schema, dimensional models
-- **etl-pipelines/** → ETL/ELT pipeline implementations
-- **airflow/** → Workflow orchestration examples
-- **spark/** → Apache Spark examples and projects
-- **cloud/** → Cloud-related experiments and implementations
-- **projects/** → End-to-end data engineering projects
-- **datasets/** → Sample datasets used for learning
-- **docs/** → Notes, diagrams, and documentation
+### Databricks
+- Job and notebook starter folders
+- Sample pipeline configuration
 
----
+### Kafka
+- Topic and consumer/producer configuration examples
+- Environment setup for message-driven workflows
 
-## 🚀 Projects
+### PostgreSQL
+- Schema initialization script
+- Migration folder structure for SQL-based database setup
 
-### Planned Projects
+### PySpark
+- Sample employee dataset in CSV format
+- Spark script that reads CSV and generates JSON for the dashboard
+- Simple Flask app and HTML UI for viewing the data in the browser
 
-- [ ] ETL Pipeline using Python
-- [ ] Data Warehouse Design
-- [ ] Azure Data Factory Pipeline
-- [ ] Apache Airflow Workflow
-- [ ] Spark Data Processing Project
-- [ ] Real-Time Streaming Pipeline
-- [ ] End-to-End Data Engineering Project
+## Quick start
 
----
+### PySpark dashboard
 
-## 📈 Progress Tracker
+From the PySpark folder:
 
-| Topic | Status |
-|---------|---------|
-| Python | ✅ Completed |
-| SQL | ✅ Completed |
-| Data Modeling | 🔄 In Progress |
-| ETL Pipelines | 🔄 In Progress |
-| Azure Data Engineering | ⏳ Planned |
-| Apache Spark | ⏳ Planned |
-| Airflow | ⏳ Planned |
+```powershell
+cd C:\workspace\NagaDataEngineering\pyspark
+python test_data_example.py
+python app.py
+```
 
----
+Then open the app in a browser:
 
-## 📚 Learning Resources
+```text
+http://127.0.0.1:5000
+```
 
-- Data Engineering Course Materials
-- Microsoft Learn
-- Azure Documentation
-- Apache Spark Documentation
-- Airflow Documentation
+## Tech stack
 
----
+- Python
+- PySpark
+- Flask
+- PostgreSQL
+- Kafka
+- Databricks
+- GitHub
 
-## 🤝 Contributions
+## Learning goals
 
-This repository is primarily for learning and experimentation. Suggestions and improvements are always welcome.
+- Build reusable data engineering project structure
+- Practice ingestion and transformation patterns
+- Work with streaming and batch data concepts
+- Explore schema design and database setup
+- Create simple dashboards for data validation and visualization
 
----
+## Status
 
-## 📌 Note
+This repository is currently in an active learning and prototype stage. The structure is intentionally simple and designed to expand as workflows and projects grow.
 
-This repository serves as a learning journal and portfolio showcasing my progress in Data Engineering. Projects and code will evolve as I gain more experience and knowledge.
+## Notes
+
+The project is meant to be a practical learning repository and portfolio base for modern data engineering work. It is structured to support experimentation while staying easy to navigate and extend.
