@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS raw_events (
+    event_id SERIAL PRIMARY KEY,
+    event_name VARCHAR(255),
+    event_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+

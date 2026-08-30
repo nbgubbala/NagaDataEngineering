@@ -1,0 +1,6 @@
+{
+  "workspace_name": "main",
+  "cluster_id": "cluster-001",
+  "job_name": "daily_pipeline",
+  "schedule": "0 6 * * *"
+}
