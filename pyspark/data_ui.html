@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PySpark Data Viewer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        background: #f5f7fb;
+        color: #1f2937;
+      }
+      h1 {
+        margin-bottom: 12px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+      th, td {
+        border: 1px solid #dfe3ec;
+        padding: 10px 12px;
+        text-align: left;
+      }
+      th {
+        background: #e5eefc;
+      }
+      .status {
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PySpark Sample Data</h1>
+    <div id="status" class="status">Loading data...</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody id="data-body"></tbody>
+    </table>
+
+    <script>
+      async function loadData() {
+        try {
+          const response = await fetch('./sample_data.json');
+          if (!response.ok) {
+            throw new Error('sample_data.json not found');
+          }
+
+          const data = await response.json();
+          const tbody = document.getElementById('data-body');
+          const status = document.getElementById('status');
+
+          if (!data || data.length === 0) {
+            status.textContent = 'No data found.';
+            return;
+          }
+
+          tbody.innerHTML = data
+            .map(
+              row => `
+                <tr>
+                  <td>${row.name}</td>
+                  <td>${row.department}</td>
+                  <td>$${Number(row.salary).toLocaleString()}</td>
+                  <td>${row.city}</td>
+                </tr>
+              `
+            )
+            .join('');
+
+          status.textContent = `Loaded ${data.length} records`;
+        } catch (error) {
+          document.getElementById('status').textContent = 'Error loading data: ' + error.message;
+        }
+      }
+
+      loadData();
+    </script>
+  </body>
+</html>
