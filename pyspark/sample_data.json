@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Alice",
+    "department": "Engineering",
+    "salary": 85000,
+    "city": "New York"
+  },
+  {
+    "name": "Bob",
+    "department": "Analytics",
+    "salary": 91000,
+    "city": "Chicago"
+  },
+  {
+    "name": "Carol",
+    "department": "Marketing",
+    "salary": 78000,
+    "city": "Austin"
+  },
+  {
+    "name": "Carol",
+    "department": "Marketing",
+    "salary": 80000,
+    "city": "Austin"
+  },
+  {
+    "name": "David",
+    "department": "Finance",
+    "salary": 96000,
+    "city": "Boston"
+  },
+  {
+    "name": "Eve",
+    "department": "Operations",
+    "salary": 72000,
+    "city": "Seattle"
+  },
+  {
+    "name": "Frank",
+    "department": "Sales",
+    "salary": 83000,
+    "city": "Denver"
+  },
+  {
+    "name": "Grace",
+    "department": "HR",
+    "salary": 76000,
+    "city": "San Jose"
+  }
+]
